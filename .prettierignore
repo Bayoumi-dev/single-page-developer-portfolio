@@ -1,0 +1,5 @@
+src/assets
+src/views/favicon.ico
+.browserslistrc
+.gitignore
+.prettierignore
