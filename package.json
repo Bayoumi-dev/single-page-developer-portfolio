@@ -1,0 +1,20 @@
+{
+   "name": "single-page-developer-portfolio",
+   "version": "1.0.0",
+   "description": "Single Page Developer Portfolio",
+   "main": "src/index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Bayoumi-dev/single-page-developer-portfolio.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/Bayoumi-dev/single-page-developer-portfolio/issues"
+   },
+   "homepage": "https://github.com/Bayoumi-dev/single-page-developer-portfolio#readme",
+}
