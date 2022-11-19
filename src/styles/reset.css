@@ -1,0 +1,57 @@
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   border: none;
+   background: transparent;
+   box-sizing: border-box;
+}
+html {
+   line-height: 1.15;
+}
+hr {
+   height: 0;
+   box-sizing: content-box;
+   border-top: 1px solid;
+   border-color: inherit;
+   overflow: visible;
+}
+ul,
+ol {
+   list-style: none;
+}
+a,
+picture {
+   display: inline-block;
+}
+a,
+abbr[title] {
+   text-decoration: none;
+}
+a,
+button {
+   color: inherit;
+   cursor: pointer;
+}
+button,
+input,
+select,
+textarea {
+   font-family: inherit;
+}
+button,
+select {
+   text-transform: none;
+}
+main,
+details,
+template {
+   display: block;
+}
+[hidden] {
+   display: none !important;
+}
+summary {
+   display: list-item;
+}

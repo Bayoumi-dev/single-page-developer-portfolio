@@ -1,0 +1,44 @@
+@font-face {
+   font-family: 'Space Grotesk';
+   src: url('../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf')
+      format('truetype-variations');
+   font-weight: 500 700;
+}
+body {
+   font-size: 2.5rem;
+   font-family: var(--ff-main);
+}
+h1,
+h2 {
+   font-size: 2.5rem;
+   font-weight: var(--fw-bold);
+   line-height: 1;
+   letter-spacing: -0.15625rem;
+}
+p {
+   font-size: 1rem;
+   line-height: 1.625;
+   font-weight: var(--fw-medium);
+}
+@media (min-width: 48em) {
+   h1,
+   h2 {
+      font-size: 4.5rem;
+   }
+   h3 {
+      font-size: 1.5rem;
+      font-weight: var(--fw-bold);
+      line-height: 1.333;
+   }
+   p {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      font-weight: var(--fw-medium);
+   }
+}
+@media (min-width: 75em) {
+   h1,
+   h2 {
+      font-size: 5.5rem;
+   }
+}
