@@ -10,5 +10,90 @@
       <title>Single-page developer portfolio | Frontend Mentor</title>
    </head>
 
-   <body></body>
+   <body>
+      <!-- Header -->
+      <header class="header position-absolute top-0 w-100 z-index-1000">
+         <div
+            class="container d-flex flex-column flex-md-row align-items-center justify-content-md-between pt-4 gap-4">
+            <a href="#" class="logo">adamkeyes</a>
+            <ul class="social-list d-flex align-items-center gap-4">
+               <li>
+                  <a href="#" class="social-links">
+                     <img
+                        class="w-100"
+                        src="../assets/images/icon-github.svg"
+                        alt="Github profile" />
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="social-links">
+                     <img
+                        class="w-100"
+                        src="../assets/images/icon-frontend-mentor.svg"
+                        alt="Frontend Mentor profile" />
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="social-links">
+                     <img
+                        class="w-100"
+                        src="../assets/images/icon-linkedin.svg"
+                        alt="Linkedin profile" />
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="social-links">
+                     <img
+                        class="w-100"
+                        src="../assets/images/icon-twitter.svg"
+                        alt="Twitter profile" />
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </header>
+
+      <main>
+         <!-- Hero section -->
+         <section class="hero position-relative overflow-hidden">
+            <div
+               class="hero__decor position-absolute top-0 start-0 z-index-n1 w-100 max-w h-100"></div>
+            <div class="container position-xl-relative">
+               <div
+                  class="hero__profile-pic mx-auto position-md-absolute top-md-0 right-md-0 z-index-n1">
+                  <picture class="w-100 h-100 overflow-hidden">
+                     <source
+                        media="(min-width: 75em)"
+                        srcset="../assets/images/image-profile-desktop.webp" />
+                     <source
+                        media="(min-width: 48em)"
+                        srcset="../assets/images/image-profile-tablet.webp" />
+                     <img
+                        src="../assets/images/image-profile-mobile.webp"
+                        alt="Adam Keyes profile image"
+                        class="w-100 h-100" />
+                  </picture>
+               </div>
+
+               <div class="hero__content text-center text-md-start">
+                  <h1 class="mx-md-0">
+                     Nice to
+                     <span class="d-md-block d-xl-inline-block"></span> meet
+                     you! I’m
+                     <span class="hero__content-highlight position-relative"
+                        >Adam Keyes</span
+                     >.
+                  </h1>
+                  <p>
+                     Based in the UK, I’m a front-end developer passionate about
+                     building accessible web apps that users love.
+                  </p>
+                  <a href="#" role="button" class="text-uppercase">
+                     Contact Me
+                  </a>
+               </div>
+            </div>
+         </section>
+      </main>
+   </body>
 </html>
