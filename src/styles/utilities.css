@@ -1,3 +1,11 @@
+.max-w {
+   max-width: 1920px;
+}
+.absolute-center {
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+}
 .z-index-1 {
    z-index: 1;
 }
@@ -12,9 +20,6 @@
 }
 .z-index-n1 {
    z-index: -1;
-}
-.max-w {
-   max-width: 1920px;
 }
 @media (min-width: 768px) {
    .position-md-relative {
@@ -34,6 +39,9 @@
    }
    .left-md-0 {
       left: 0;
+   }
+   .gy-md-6 {
+      --bs-gutter-y: 3.625rem;
    }
 }
 @media (min-width: 1200px) {
