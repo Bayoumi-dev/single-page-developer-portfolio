@@ -1,6 +1,9 @@
 .max-w {
    max-width: 1920px;
 }
+.object-fit-cover {
+   object-fit: cover;
+}
 .absolute-center {
    top: 0;
    left: 50%;
@@ -43,6 +46,9 @@
    .gy-md-6 {
       --bs-gutter-y: 3.625rem;
    }
+   .border-md-0 {
+      border-width: 0px !important;
+   }
 }
 @media (min-width: 1200px) {
    .position-xl-relative {
@@ -62,5 +68,9 @@
    }
    .left-xl-0 {
       left: 0;
+   }
+   .area-xl-100 {
+      width: 100% !important;
+      height: 100% !important;
    }
 }

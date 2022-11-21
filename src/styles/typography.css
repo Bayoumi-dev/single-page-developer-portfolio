@@ -5,7 +5,6 @@
    font-weight: 500 700;
 }
 body {
-   font-size: 2.5rem;
    font-family: var(--ff-main);
 }
 h1,
@@ -14,6 +13,11 @@ h2 {
    font-weight: var(--fw-bold);
    line-height: 1;
    letter-spacing: -0.15625rem;
+}
+h3 {
+   font-size: 1.5rem;
+   font-weight: var(--fw-bold);
+   line-height: 1.333;
 }
 p {
    font-size: 1rem;
@@ -31,11 +35,6 @@ button,
    h1,
    h2 {
       font-size: 4.5rem;
-   }
-   h3 {
-      font-size: 1.5rem;
-      font-weight: var(--fw-bold);
-      line-height: 1.333;
    }
    p {
       font-size: 1.125rem;

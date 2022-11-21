@@ -20,6 +20,10 @@ button,
 [role='button'] {
    color: var(--color-white);
 }
+[role='button'] {
+   width: fit-content;
+   height: fit-content;
+}
 .container {
    width: 90%;
    padding-inline: 0;
@@ -225,5 +229,69 @@ button,
    }
    .skills .container {
       padding-block: 4.5rem 0;
+   }
+}
+
+/* Projects Section */
+.projects .container {
+   padding-block: 5rem;
+}
+.projects__list {
+   padding-top: 2.5rem;
+   row-gap: 2.5rem;
+   column-gap: 1.5rem;
+}
+.projects__project {
+   height: 24.875rem;
+}
+.projects__project picture {
+   max-width: 21.375rem;
+   height: 15.8125rem;
+}
+.projects__project-buttons {
+   column-gap: 1.875rem;
+}
+.projects__project h3 {
+   margin-block: 1.25rem 0.4375rem;
+}
+.projects-project-skills-list {
+   column-gap: 1.125rem;
+}
+@media (min-width: 768px) {
+   .projects .container {
+      padding-block: 6.25rem;
+   }
+   .projects__list {
+      padding-top: 3.75rem;
+   }
+}
+@media (min-width: 1200px) {
+   .projects .container {
+      padding-block: 8.75rem;
+   }
+   .projects__list {
+      padding-top: 5rem;
+      row-gap: 3.75rem;
+   }
+   .projects__project {
+      height: auto;
+   }
+   .projects__project picture {
+      max-width: 33.75rem;
+      height: 25rem;
+   }
+   .projects__project-buttons {
+      row-gap: 3rem;
+      background-color: black;
+      opacity: 0.75;
+      visibility: hidden;
+   }
+   .projects__project-preview:hover .projects__project-buttons {
+      visibility: visible;
+   }
+}
+@media (min-width: 1600px) {
+   .projects__list {
+      column-gap: 3.75rem;
    }
 }
