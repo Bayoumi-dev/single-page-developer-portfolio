@@ -17,15 +17,22 @@ h2,
 h3,
 a,
 button,
+input,
+textarea,
 [role='button'] {
    color: var(--color-white);
+}
+h3 > a,
+button,
+[role='button'] {
+   text-transform: uppercase;
 }
 [role='button'] {
    width: fit-content;
    height: fit-content;
 }
 .container {
-   width: 90%;
+   width: 92%;
    padding-inline: 0;
 }
 @media (min-width: 576px) {
@@ -54,7 +61,7 @@ button,
    font-size: 1.5rem;
    font-weight: var(--fw-bold);
    line-height: 1;
-   letter-spacing: -0.02777775rem;
+   letter-spacing: -0.0278rem;
 }
 /* Component - Social links */
 .social-list {
@@ -73,7 +80,7 @@ button,
 @media (min-width: 768px) {
    .logo {
       font-size: 2rem;
-      letter-spacing: -0.02777775rem;
+      letter-spacing: -0.0278rem;
    }
    .social-links {
       width: 1.5rem;
@@ -294,4 +301,86 @@ button,
    .projects__list {
       column-gap: 3.75rem;
    }
+}
+
+/* Contact Section */
+section.contact {
+   background-color: var(--color-dk-grey);
+}
+.contact .decor::after {
+   right: 50%;
+   bottom: 96px;
+}
+.contact .container {
+   padding-block: 3.75rem 5.5rem;
+}
+.contact__title {
+   max-width: 27.8125rem;
+}
+.contact__title p {
+   margin-block: 1.25rem 3rem;
+}
+.contact__form {
+   row-gap: 2rem;
+}
+.contact__form textarea {
+   height: 6.6875rem;
+}
+.contact__form input,
+.contact__form textarea {
+   line-height: 1.625;
+   letter-spacing: -0.0138rem;
+   padding-left: 1.5rem;
+   padding-bottom: 1rem;
+}
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+   .contact .decor::after {
+      left: -368px;
+      bottom: 28px;
+   }
+   .contact .container {
+      padding-block: 5rem 5.75rem;
+   }
+   .contact__form {
+      width: 27.8125rem;
+   }
+}
+@media (min-width: 768px) {
+   .contact .decor::after {
+      left: -205px;
+      bottom: 48px;
+   }
+}
+/* Errors & valid */
+.error {
+   position: relative;
+}
+.error input {
+   border-color: var(--color-error) !important;
+}
+.error input::placeholder {
+   color: var(--color-error);
+   opacity: 0.75;
+}
+.error .error-icon {
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+.error .error-msg {
+   position: absolute;
+   top: 100%;
+   right: 0;
+   margin-top: 0.3125rem;
+   color: var(--color-error);
+   font-size: 0.75rem;
+   line-height: 1.333;
+   letter-spacing: -0.01rem;
+}
+.valid input {
+   border-color: var(--color-green) !important;
 }
