@@ -4,6 +4,9 @@
 .object-fit-cover {
    object-fit: cover;
 }
+.opacity-0 {
+   opacity: 0;
+}
 .absolute-center {
    top: 0;
    left: 50%;

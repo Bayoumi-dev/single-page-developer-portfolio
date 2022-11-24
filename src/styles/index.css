@@ -89,6 +89,9 @@ button,
       font-size: 2rem;
       letter-spacing: -0.0278rem;
    }
+   .social-list {
+      gap: 2rem !important;
+   }
    .social-link {
       width: 1.5rem;
       height: 1.5rem;
@@ -98,13 +101,12 @@ button,
 /* Header */
 @media (min-width: 768px) {
    .header .container {
-      padding-top: 1.75rem;
+      padding-top: 2.5rem !important;
    }
 }
 @media (min-width: 1200px) {
-   .header .container {
-      padding-top: 2.5rem;
-      padding-inline: 1rem;
+   .header .social-list {
+      padding-right: 2rem;
    }
 }
 
@@ -190,13 +192,17 @@ button,
       transform: translateX(-50%);
    }
    .hero__content {
-      padding-block: 12.375rem 13.75rem;
+      padding-block: 12.375rem 13.625rem;
    }
    .hero__content h1 {
       max-width: 50rem;
    }
+   .hero__content p {
+      padding-block: 2.75rem 3.5rem;
+   }
    .hero__content-highlight::after {
       height: 0.375rem;
+      bottom: 0.375rem;
    }
 }
 
@@ -239,7 +245,7 @@ button,
 }
 @media (min-width: 1200px) {
    .skills .decor::after {
-      right: -240px;
+      right: -236px;
    }
    .skills .container {
       padding-block: 4.5rem 0;
@@ -255,21 +261,20 @@ button,
    row-gap: 2.5rem;
    column-gap: 1.5rem;
 }
-.projects__project {
-   height: 24.875rem;
-}
 .projects__project picture {
    max-width: 21.375rem;
    height: 15.8125rem;
 }
-.projects__project-buttons {
-   column-gap: 1.875rem;
-}
 .projects__project h3 {
-   margin-block: 1.25rem 0.4375rem;
+   margin-block: 1rem 0.625rem;
 }
 .projects-project-skills-list {
    column-gap: 1.125rem;
+   text-transform: uppercase;
+}
+.projects__project-buttons {
+   margin-top: 0.625rem;
+   column-gap: 1.875rem;
 }
 @media (min-width: 768px) {
    .projects .container {
@@ -285,22 +290,24 @@ button,
    }
    .projects__list {
       padding-top: 5rem;
-      row-gap: 3.75rem;
+      row-gap: 4.375rem;
    }
-   .projects__project {
-      height: auto;
+   .projects-project-skills-list {
+      font-size: 1.125rem;
    }
+   .projects__project-buttons,
    .projects__project picture {
       max-width: 33.75rem;
-      height: 25rem;
+      height: 25rem !important;
    }
    .projects__project-buttons {
-      row-gap: 3rem;
-      background-color: black;
-      opacity: 0.75;
+      margin-top: 0;
+      row-gap: 2.375rem;
+      background-color: rgba(0, 0, 0, 0.74);
       visibility: hidden;
    }
-   .projects__project-preview:hover .projects__project-buttons {
+   .projects__project-buttons:hover,
+   .projects__project picture:hover ~ .projects__project-buttons {
       visibility: visible;
    }
 }
@@ -332,14 +339,17 @@ button,
 }
 .contact__form input,
 .contact__form textarea {
+   font-size: 1rem;
    line-height: 1.625;
+   text-transform: uppercase;
    letter-spacing: -0.0138rem;
    padding-left: 1.5rem;
    padding-bottom: 1rem;
+   outline: none;
 }
-.contact__form input::placeholder,
-.contact__form textarea::placeholder {
-   text-transform: uppercase;
+.contact__form input:autofill,
+.contact__form textarea:autofill {
+   padding-top: 1rem;
 }
 @media (min-width: 768px) {
    .contact .decor::after {
@@ -347,7 +357,7 @@ button,
       bottom: 28px;
    }
    .contact .container {
-      padding-block: 5rem 5.75rem;
+      padding-block: 5.25rem 5.75rem;
    }
    .contact__form {
       width: 27.8125rem;
@@ -356,7 +366,10 @@ button,
 @media (min-width: 1200px) {
    .contact .decor::after {
       left: -205px;
-      bottom: 48px;
+      bottom: 44px;
+   }
+   .contact__title p {
+      margin-block: 2.25rem 0;
    }
 }
 
