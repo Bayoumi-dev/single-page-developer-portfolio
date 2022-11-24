@@ -6,6 +6,8 @@
 @import url(./utilities.css);
 /* Typography */
 @import url(./typography.css);
+/* Animation */
+@import url(./animation.css);
 
 /* Global */
 body {
@@ -22,10 +24,27 @@ textarea,
 [role='button'] {
    color: var(--color-white);
 }
-h3 > a,
 button,
 [role='button'] {
    text-transform: uppercase;
+   background-image: linear-gradient(
+      70deg,
+      var(--color-green) 50%,
+      var(--color-white) 50%
+   );
+   background-size: 200% 100%;
+   background-position: right;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   box-decoration-break: clone;
+   transition: 0.3s;
+}
+button:hover,
+button:focus,
+[role='button']:hover,
+[role='button']:focus {
+   background-position: left;
 }
 [role='button'] {
    width: fit-content;
@@ -77,6 +96,12 @@ footer {
    display: flex;
    align-items: center;
    justify-content: center;
+}
+.social-link path {
+   transition: 0.3s;
+}
+.social-link:hover path {
+   fill: var(--color-green);
 }
 /* Component - Social links */
 button,
@@ -267,6 +292,7 @@ button,
 }
 .projects__project h3 {
    margin-block: 1rem 0.625rem;
+   text-transform: uppercase;
 }
 .projects-project-skills-list {
    column-gap: 1.125rem;
@@ -305,10 +331,13 @@ button,
       row-gap: 2.375rem;
       background-color: rgba(0, 0, 0, 0.74);
       visibility: hidden;
+      opacity: 0;
+      transition: 0.3s;
    }
    .projects__project-buttons:hover,
    .projects__project picture:hover ~ .projects__project-buttons {
       visibility: visible;
+      opacity: 1;
    }
 }
 @media (min-width: 1600px) {

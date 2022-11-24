@@ -7,14 +7,73 @@
          name="description"
          content="This is a solution to Single-page developer portfolio challenge on Frontend Mentor. 
         The purpose of this challenge is to improve my coding skills by building realistic projects." />
+      <style>
+         body {
+            overflow: hidden;
+         }
+         /* Intro Section */
+         .intro-section {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            background-color: var(--color-black);
+            z-index: 9999;
+            animation: hidden 1s 5s forwards;
+         }
+         /* Typewriter */
+         .typewriter {
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: left;
+            white-space: nowrap;
+            width: 0;
+            margin: 0 auto;
+            overflow: hidden;
+            border-right: 0.1em solid;
+            animation: typing 2.5s 1s steps(40, end) forwards,
+               caret 0.75s step-end infinite;
+         }
+         @keyframes typing {
+            0% {
+               width: 0;
+               opacity: 0;
+            }
+            50% {
+               opacity: 1;
+            }
+            100% {
+               width: 275px;
+            }
+         }
+         @keyframes caret {
+            0%,
+            100% {
+               border-color: transparent;
+            }
+            50% {
+               border-color: var(--color-green);
+            }
+         }
+         @keyframes hidden {
+            100% {
+               opacity: 0;
+            }
+         }
+      </style>
       <title>Single-page developer portfolio | Frontend Mentor</title>
    </head>
 
    <body>
+      <!-- Intro Section -->
+      <div
+         class="intro-section d-flex align-items-center justify-content-center">
+         <div class="typewriter">Welcome to my portfolio</div>
+      </div>
       <!-- Header -->
       <header class="header position-absolute top-0 w-100 z-index-1000">
          <div
-            class="container d-flex flex-column flex-md-row align-items-center justify-content-md-between pt-4 gap-4">
+            class="container d-flex flex-column flex-md-row align-items-center justify-content-md-between pt-4 gap-4 animate fade-in">
             <a href="#" class="logo">adamkeyes</a>
             <ul class="social-list d-flex align-items-center gap-4">
                <li>
@@ -89,7 +148,7 @@
                class="decor position-absolute absolute-center z-index-n1 w-100 max-w h-100"></div>
             <div class="container position-xl-relative">
                <div
-                  class="hero__profile-pic mx-auto position-md-absolute top-md-0 right-md-0 z-index-n1">
+                  class="hero__profile-pic mx-auto position-md-absolute top-md-0 right-md-0 z-index-n1 animate fade-in">
                   <picture class="w-100 h-100 overflow-hidden">
                      <source
                         media="(min-width: 75em)"
@@ -105,7 +164,7 @@
                </div>
 
                <div class="hero__content text-center text-md-start">
-                  <h1 class="mx-md-0">
+                  <h1 class="mx-md-0 animate fade-in">
                      Nice to
                      <span class="d-md-block d-xl-inline-block"></span>meet you!
                      I’m
@@ -113,11 +172,13 @@
                         >Adam Keyes</span
                      >.
                   </h1>
-                  <p>
+                  <p class="animate fade-in">
                      Based in the UK, I’m a front-end developer passionate about
                      building accessible web apps that users love.
                   </p>
-                  <a href="#" role="button"> Contact Me </a>
+                  <a href="#" role="button" class="animate fade-in">
+                     Contact Me
+                  </a>
                </div>
             </div>
          </section>
@@ -127,41 +188,41 @@
             <div
                class="decor position-absolute absolute-center z-index-n1 w-100 max-w h-100"></div>
             <div class="container border-top border-white">
-               <h2 class="position-absolute opacity-0">Skills</h2>
+               <h2 class="position-absolute opacity-0 z-index-n10">Skills</h2>
                <ul
                   class="skills__list row text-center text-md-start gy-4 gy-md-6">
-                  <li class="skills__skill col-md-6 col-xl-4">
-                     <span class="skills__skill-name">HTML</span>
+                  <li class="skills__skill col-md-6 col-xl-4 animate fade-in">
+                     <span class="skills__skill-name animate-text-fill">HTML</span>
                      <span class="skills__skill-experience d-block">
                         4 Years Experience
                      </span>
                   </li>
-                  <li class="skills__skill col-md-6 col-xl-4">
-                     <span class="skills__skill-name">CSS</span>
+                  <li class="skills__skill col-md-6 col-xl-4 animate fade-in">
+                     <span class="skills__skill-name animate-text-fill">CSS</span>
                      <span class="skills__skill-experience d-block">
                         4 Years Experience
                      </span>
                   </li>
-                  <li class="skills__skill col-md-6 col-xl-4">
-                     <span class="skills__skill-name">Javascript</span>
+                  <li class="skills__skill col-md-6 col-xl-4 animate fade-in">
+                     <span class="skills__skill-name animate-text-fill">Javascript</span>
                      <span class="skills__skill-experience d-block">
                         4 Years Experience
                      </span>
                   </li>
-                  <li class="skills__skill col-md-6 col-xl-4">
-                     <span class="skills__skill-name">Accessibility</span>
+                  <li class="skills__skill col-md-6 col-xl-4 animate fade-in">
+                     <span class="skills__skill-name animate-text-fill">Accessibility</span>
                      <span class="skills__skill-experience d-block">
                         4 Years Experience
                      </span>
                   </li>
-                  <li class="skills__skill col-md-6 col-xl-4">
-                     <span class="skills__skill-name">React</span>
+                  <li class="skills__skill col-md-6 col-xl-4 animate fade-in">
+                     <span class="skills__skill-name animate-text-fill">React</span>
                      <span class="skills__skill-experience d-block">
                         3 Years Experience
                      </span>
                   </li>
-                  <li class="skills__skill col-md-6 col-xl-4">
-                     <span class="skills__skill-name">Sass</span>
+                  <li class="skills__skill col-md-6 col-xl-4 animate fade-in">
+                     <span class="skills__skill-name animate-text-fill">Sass</span>
                      <span class="skills__skill-experience d-block">
                         3 Years Experience
                      </span>
@@ -173,7 +234,8 @@
          <!-- Projects Section -->
          <section class="projects">
             <div class="container border-top border-white border-md-0">
-               <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+               <div
+                  class="d-flex flex-wrap justify-content-between align-items-center gap-2 animate fade-in">
                   <h2>Projects</h2>
                   <a href="#" role="button" class="flex-shrink-0 pt-0">
                      Contact Me
@@ -188,19 +250,19 @@
                         <img
                            src="../assets/images/thumbnail-project-1-large.webp"
                            alt="Design portfolio preview"
-                           class="w-100 h-100 object-fit-cover" />
+                           class="w-100 h-100 object-fit-cover animate fade-in" />
                      </picture>
-                     <h3>
-                        <a href="#">Design portfolio</a>
-                     </h3>
-                     <ul class="projects-project-skills-list d-flex">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                     </ul>
+                     <div class="animate fade-in">
+                        <h3>Design portfolio</h3>
+                        <ul class="projects-project-skills-list d-flex">
+                           <li>HTML</li>
+                           <li>CSS</li>
+                        </ul>
+                     </div>
                      <div
                         class="projects__project-buttons w-100 d-flex position-xl-absolute top-xl-0 left-xl-0 flex-xl-column justify-content-xl-center align-items-center">
-                        <a href="#" role="button"> View Project </a>
-                        <a href="#" role="button"> View Code </a>
+                        <a href="#" role="button">View Project</a>
+                        <a href="#" role="button">View Code</a>
                      </div>
                   </li>
                   <!-- Project -->
@@ -209,19 +271,19 @@
                         <img
                            src="../assets/images/thumbnail-project-2-large.webp"
                            alt="E-learning Landing Page preview"
-                           class="w-100 h-100 object-fit-cover" />
+                           class="w-100 h-100 object-fit-cover animate fade-in-2 animation-delay-xl-100" />
                      </picture>
-                     <h3>
-                        <a href="#">E-learning Landing Page</a>
-                     </h3>
-                     <ul class="projects-project-skills-list d-flex">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                     </ul>
+                     <div class="animate fade-in">
+                        <h3>E-learning Landing Page</h3>
+                        <ul class="projects-project-skills-list d-flex">
+                           <li>HTML</li>
+                           <li>CSS</li>
+                        </ul>
+                     </div>
                      <div
                         class="projects__project-buttons w-100 d-flex position-xl-absolute top-xl-0 left-xl-0 flex-xl-column justify-content-xl-center align-items-center">
-                        <a href="#" role="button"> View Project </a>
-                        <a href="#" role="button"> View Code </a>
+                        <a href="#" role="button">View Project</a>
+                        <a href="#" role="button">View Code</a>
                      </div>
                   </li>
                   <!-- Project -->
@@ -230,20 +292,20 @@
                         <img
                            src="../assets/images/thumbnail-project-3-large.webp"
                            alt="TODO Web App preview"
-                           class="w-100 h-100 object-fit-cover" />
+                           class="w-100 h-100 object-fit-cover animate fade-in" />
                      </picture>
-                     <h3>
-                        <a href="#">TODO Web App</a>
-                     </h3>
-                     <ul class="projects-project-skills-list d-flex">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                     </ul>
+                     <div class="animate fade-in">
+                        <h3>TODO Web App</h3>
+                        <ul class="projects-project-skills-list d-flex">
+                           <li>HTML</li>
+                           <li>CSS</li>
+                           <li>JavaScript</li>
+                        </ul>
+                     </div>
                      <div
                         class="projects__project-buttons w-100 d-flex position-xl-absolute top-xl-0 left-xl-0 flex-xl-column justify-content-xl-center align-items-center">
-                        <a href="#" role="button"> View Project </a>
-                        <a href="#" role="button"> View Code </a>
+                        <a href="#" role="button">View Project</a>
+                        <a href="#" role="button">View Code</a>
                      </div>
                   </li>
                   <!-- Project -->
@@ -252,20 +314,20 @@
                         <img
                            src="../assets/images/thumbnail-project-4-large.webp"
                            alt="Entertainment web application preview"
-                           class="w-100 h-100 object-fit-cover" />
+                           class="w-100 h-100 object-fit-cover animate fade-in-2 animation-delay-xl-100" />
                      </picture>
-                     <h3>
-                        <a href="#">Entertainment Web App</a>
-                     </h3>
-                     <ul class="projects-project-skills-list d-flex">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                     </ul>
+                     <div class="animate fade-in">
+                        <h3>Entertainment Web App</h3>
+                        <ul class="projects-project-skills-list d-flex">
+                           <li>HTML</li>
+                           <li>CSS</li>
+                           <li>JavaScript</li>
+                        </ul>
+                     </div>
                      <div
                         class="projects__project-buttons w-100 d-flex position-xl-absolute top-xl-0 left-xl-0 flex-xl-column justify-content-xl-center align-items-center">
-                        <a href="#" role="button"> View Project </a>
-                        <a href="#" role="button"> View Code </a>
+                        <a href="#" role="button">View Project</a>
+                        <a href="#" role="button">View Code</a>
                      </div>
                   </li>
                   <!-- Project -->
@@ -274,18 +336,20 @@
                         <img
                            src="../assets/images/thumbnail-project-5-large.webp"
                            alt="Memory Game preview"
-                           class="w-100 h-100 object-fit-cover" />
+                           class="w-100 h-100 object-fit-cover animate fade-in" />
                      </picture>
-                     <h3><a href="#">Memory Game</a></h3>
-                     <ul class="projects-project-skills-list d-flex">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                     </ul>
+                     <div class="animate fade-in">
+                        <h3>Memory Game</h3>
+                        <ul class="projects-project-skills-list d-flex">
+                           <li>HTML</li>
+                           <li>CSS</li>
+                           <li>JavaScript</li>
+                        </ul>
+                     </div>
                      <div
                         class="projects__project-buttons w-100 d-flex position-xl-absolute top-xl-0 left-xl-0 flex-xl-column justify-content-xl-center align-items-center">
-                        <a href="#" role="button"> View Project </a>
-                        <a href="#" role="button"> View Code </a>
+                        <a href="#" role="button">View Project</a>
+                        <a href="#" role="button">View Code</a>
                      </div>
                   </li>
                   <!-- Project -->
@@ -294,11 +358,9 @@
                         <img
                            src="../assets/images/thumbnail-project-6-large.webp"
                            alt="Art Gallery Showcase preview"
-                           class="w-100 h-100 object-fit-cover" />
+                           class="w-100 h-100 object-fit-cover animate fade-in-2 animation-delay-xl-100" />
                      </picture>
-                     <h3>
-                        <a href="#">Art Gallery Showcase</a>
-                     </h3>
+                     <h3>Art Gallery Showcase</h3>
                      <ul class="projects-project-skills-list d-flex">
                         <li>HTML</li>
                         <li>CSS</li>
@@ -306,8 +368,8 @@
                      </ul>
                      <div
                         class="projects__project-buttons w-100 d-flex position-xl-absolute top-xl-0 left-xl-0 flex-xl-column justify-content-xl-center align-items-center">
-                        <a href="#" role="button"> View Project </a>
-                        <a href="#" role="button"> View Code </a>
+                        <a href="#" role="button">View Project</a>
+                        <a href="#" role="button">View Code</a>
                      </div>
                   </li>
                </ol>
@@ -321,8 +383,8 @@
             <div
                class="container d-md-flex flex-column flex-xl-row align-items-center align-items-xl-start justify-content-xl-between">
                <div class="contact__title text-center text-xl-start">
-                  <h2>Contact</h2>
-                  <p>
+                  <h2 class="animate fade-in">Contact</h2>
+                  <p class="animate fade-in">
                      I would love to hear about your project and how I could
                      help. Please fill in the form, and I’ll get back to you as
                      soon as possible.
@@ -335,7 +397,7 @@
                         type="text"
                         placeholder="name"
                         aria-label="name"
-                        class="border-bottom border-white w-100" />
+                        class="border-bottom border-white w-100 animate fade-in" />
                   </div>
                   <div class="contact__input">
                      <input
@@ -343,7 +405,7 @@
                         type="text"
                         placeholder="email"
                         aria-label="email"
-                        class="border-bottom border-white w-100" />
+                        class="border-bottom border-white w-100 animate fade-in" />
                   </div>
                   <div class="contact__input">
                      <textarea
@@ -351,9 +413,12 @@
                         id="message"
                         placeholder="message"
                         aria-label="message"
-                        class="border-bottom border-white w-100"></textarea>
+                        class="border-bottom border-white w-100 animate fade-in"></textarea>
                   </div>
-                  <button name="submit" type="submit" class="align-self-end pt-0">
+                  <button
+                     name="submit"
+                     type="submit"
+                     class="align-self-end pt-0 animate fade-in">
                      Send message
                   </button>
                </form>
@@ -364,7 +429,7 @@
       <!-- Footer -->
       <footer class="footer">
          <div
-            class="container d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-4 border-top border-white">
+            class="container d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-4 border-top border-white animate fade-in">
             <a href="#" class="logo">adamkeyes</a>
             <ul class="social-list d-flex align-items-center gap-4">
                <li>
