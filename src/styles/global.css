@@ -1,5 +1,19 @@
 html {
    scroll-behavior: smooth;
+   scrollbar-width: thin;
+   scrollbar-color: var(--color-green) var(--color-black);
+}
+::-webkit-scrollbar {
+   max-width: 0.625rem;
+}
+::-webkit-scrollbar-track {
+   background-color: var(--color-black);
+}
+::-webkit-scrollbar-thumb {
+   background-color: var(--color-green);
+}
+::-webkit-scrollbar-thumb:hover {
+   background-color: #4ee19fe3;
 }
 body {
    background-color: var(--color-black);
