@@ -23,7 +23,7 @@
    fill: var(--color-green);
 }
 /* Social links */
-button,
+[type="submit"],
 [role='button'] {
    padding-block: 0.625rem;
    border-bottom: 2px solid var(--color-green);

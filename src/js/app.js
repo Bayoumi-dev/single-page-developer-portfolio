@@ -1,5 +1,6 @@
 // Global Variable
-const loadingIntro = document.body.querySelector('.intro-section')
+const loadingIntro = document.body.querySelector('.intro-section'),
+   scrollButton = document.body.querySelector('#scroll-button')
 
 const app = () => {
    // Intro Section
@@ -7,6 +8,27 @@ const app = () => {
       loadingIntro.remove()
       document.body.style.overflow = 'auto'
    }, 5100)
+
+   /**
+    * @description Show & hide Scroll button
+    */
+   const scrollButtonVisibility = _ =>
+      scrollY > 500
+         ? scrollButton.classList.add('--visible')
+         : scrollButton.classList.remove('--visible')
+   // Listen for scroll events
+   addEventListener('scroll', scrollButtonVisibility)
+
+   /**
+    * @description Scroll to Top when click on button
+    */
+   const handleScrollButton = _ => {
+      scroll({
+         top: 0,
+         behavior: 'smooth',
+      })
+   }
+   scrollButton.addEventListener('click', handleScrollButton)
 
    /**
     * Animation On Scroll (with IntersectionObserver)
@@ -23,7 +45,10 @@ const app = () => {
                !element.target.classList.contains('animated')
             ) {
                let duration =
-                     getStyle(element.target, 'animation-duration').replace('s','') * 1000,
+                     getStyle(element.target, 'animation-duration').replace(
+                        's',
+                        ''
+                     ) * 1000,
                   animateTimeout = duration + 100
                startAnimate(element.target, animateTimeout)
             }

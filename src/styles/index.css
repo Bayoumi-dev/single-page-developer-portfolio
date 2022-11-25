@@ -322,6 +322,22 @@
    border-color: var(--color-green) !important;
 }
 
+/* Scroll Button */
+#scroll-button {
+   bottom: 32px;
+   right: 32px;
+   opacity: 0;
+   transform: translateY(calc(100% + 32px));
+   transition: opacity 0.3s, transform 0.7s;
+}
+#scroll-button.--visible{
+   opacity: 0.75;
+   transform: translateY(0);
+}
+#scroll-button:hover {
+   opacity: 1;
+}
+
 /* Footer */
 footer .container {
    padding-block: 2.5rem 3.75rem;
