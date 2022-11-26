@@ -1,6 +1,12 @@
 .max-w {
    max-width: 1920px;
 }
+.h-fit {
+   height: fit-content;
+}
+.fs-sm {
+   font-size: 0.875rem;
+}
 .object-fit-cover {
    object-fit: cover;
 }

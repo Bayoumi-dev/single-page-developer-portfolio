@@ -253,6 +253,13 @@
 .contact__form {
    row-gap: 2rem;
 }
+.contact__form.hold input,
+.contact__form.hold textarea,
+.contact__form.hold button {
+   pointer-events: none;
+   user-select: none;
+   opacity: 0.6;
+}
 .contact__form textarea {
    height: 6.6875rem;
 }
@@ -268,7 +275,31 @@
 }
 .contact__form input:autofill,
 .contact__form textarea:autofill {
-   padding-top: 1rem;
+   padding-top: 0.5rem;
+   position: relative;
+   z-index: 1;
+}
+/* Loading when sending the form msg */
+.loading .motion span {
+   width: 0.4375rem;
+   height: 0.4375rem;
+   background-color: var(--color-green);
+   border-radius: 50%;
+   opacity: 0.2;
+   transform: scale(0.2);
+   animation: loading 0.9s infinite alternate;
+}
+.loading span:nth-of-type(2) {
+   animation-delay: 0.3s;
+}
+.loading span:last-of-type {
+   animation-delay: 0.6s;
+}
+@keyframes loading {
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
 }
 @media (min-width: 768px) {
    .contact .decor::after {
@@ -296,10 +327,12 @@
 .error {
    position: relative;
 }
-.error input {
+.error input,
+.error textarea {
    border-color: var(--color-error) !important;
 }
-.error input::placeholder {
+.error input::placeholder,
+.error textarea::placeholder {
    color: var(--color-error);
    opacity: 0.75;
 }
@@ -318,7 +351,8 @@
    line-height: 1.333;
    letter-spacing: -0.01rem;
 }
-.valid input {
+.valid input,
+.valid textarea {
    border-color: var(--color-green) !important;
 }
 
@@ -330,7 +364,7 @@
    transform: translateY(calc(100% + 32px));
    transition: opacity 0.3s, transform 0.7s;
 }
-#scroll-button.--visible{
+#scroll-button.--visible {
    opacity: 0.75;
    transform: translateY(0);
 }

@@ -1,5 +1,6 @@
 import handleScrollButton from './handleScrollButton'
 import animation from './animation'
+import handleMessageForm from './handleMessageForm'
 
 const app = () => {
    // Intro Section
@@ -13,6 +14,9 @@ const app = () => {
 
    // Execute Animation
    animation()
+
+   // Execute handle message form
+   handleMessageForm()
 }
 
 export default app

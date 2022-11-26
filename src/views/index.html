@@ -475,7 +475,7 @@
                      soon as possible.
                   </p>
                </div>
-               <form action="#" class="contact__form d-flex flex-column">
+               <form name="ms-from" class="contact__form d-flex flex-column">
                   <div class="contact__input">
                      <input
                         name="name"
@@ -500,12 +500,15 @@
                         aria-label="message"
                         class="border-bottom border-white w-100 animate fade-in"></textarea>
                   </div>
-                  <button
-                     name="submit"
-                     type="submit"
-                     class="align-self-end pt-0 animate fade-in">
-                     Send message
-                  </button>
+                  <div class="d-flex justify-content-between">
+                     <div id="send"></div>
+                     <button
+                        name="submit"
+                        type="submit"
+                        class="align-self-end ms-auto pt-0 animate fade-in">
+                        Send message
+                     </button>
+                  </div>
                </form>
             </div>
          </section>
