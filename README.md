@@ -78,7 +78,7 @@ npm run dev
     │   ├── handleScrollButton.js
     │   ├── htmlElements.js
     │   └── validation.js
-    ├── style
+    ├── styles
     │   ├── animation.css
     │   ├── components.css
     │   ├── global.css
