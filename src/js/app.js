@@ -7,7 +7,7 @@ const app = () => {
    setTimeout(() => {
       document.body.querySelector('.intro-section').remove()
       document.body.style.overflow = 'auto'
-   }, 5100)
+   }, 5250)
 
    // Execute scroll button
    handleScrollButton()
